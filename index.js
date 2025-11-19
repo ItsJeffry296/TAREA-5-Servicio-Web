@@ -8,14 +8,13 @@ let contactos = [];
 app.use(express.json());
 
 app.get("/agenda.php", (req, res) => {
-    // ✅ AQUÍ USAMOS let contacto
+    
     let contacto = {
         nombre: "Jeffrey",
         apellido: "Mercado", 
         telefono: "809-272-3343"
     };
     
-    // Agregamos el contacto al array si no existe
     if (contactos.length === 0) {
         contactos.push(contacto);
     }
@@ -31,7 +30,7 @@ app.post("/agenda.php", (req, res) => {
             error: "Todos los campos son requeridos" 
         });
     }
- 
+    
     let nuevoContacto = {
         nombre: nombre,
         apellido: apellido,
@@ -47,5 +46,5 @@ app.post("/agenda.php", (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("✅ Servicio Web listo: http://localhost:3000/agenda.php");
+    console.log(" Servicio Web listo!: http://localhost:3000/agenda.php");
 });
