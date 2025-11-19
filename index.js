@@ -3,7 +3,6 @@ import express from "express";
 let app = express();
 app.use(express.json());
 
-// Array para almacenar contactos
 let contactos = [];
 
 app.use(express.json());
